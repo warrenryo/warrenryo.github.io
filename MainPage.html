@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/html.css" />
+    <link rel="stylesheet" href="css/effects.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.4.17/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.js"></script>
+    <style>
+      html {
+        height: -webkit-fill-available;
+      }
+      body {
+        z-index: -1;
+        height: -webkit-fill-available;
+      }
+    </style>
+    <title>Warren Ryo Pena</title>
+  </head>
+  <body>
+    <section id="home" class="h-[100%] dark:bg-[#232946] duration-300">
+      <!--NAVIGATION BAR-->
+      <nav
+        id="navbar"
+        class="bg-white border-gray-200 dark:bg-[#232946] duration-300 fixed w-full z-50"
+      >
+        <div
+          class="flex flex-wrap items-center justify-between lg:mx-[20vh] p-4"
+        >
+          <a id="toDark" href="#home" class="font-bold dark:text-white text-4xl"
+            >WR</a
+          >
+          <button
+            data-collapse-toggle="navbar-default"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+          <div
+            class="hidden w-full md:block md:w-auto z-10"
+            id="navbar-default"
+          >
+            <ul
+              id="navbar-var"
+              class="font-medium flex flex-col p-4 md:p-0 mt-4 border duration-300 border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-white dark:bg-[#232946]"
+            >
+              <li>
+                <a
+                  id="toDark"
+                  href="#home"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#008080] md:p-0 dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                  aria-current="page"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  id="toDark"
+                  href="#about"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-[#008080] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  id="toDark"
+                  href="#skills"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-[#008080] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  >Skills</a
+                >
+              </li>
+              <li>
+                <a
+                  id="toDark"
+                  href="#projects"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-[#008080] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  >Projects</a
+                >
+              </li>
+              <li>
+                <a
+                  id="toDark"
+                  href="#contact"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-[#008080] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <label
+                  class="relative left-3 inline-flex items-center cursor-pointer mt-4 md:mt-0"
+                >
+                  <input
+                    id="toggleButton"
+                    type="checkbox"
+                    onclick="darkMode()"
+                    value=""
+                    class="sr-only peer"
+                  />
+                  <div
+                    class="w-11 h-6 bg-gray-200 peer-focus:outline-none dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+                  ></div>
+                  <span
+                    id="toDark"
+                    class="moon ms-3 text-sm font-medium text-gray-900 dark:text-white"
+                    ><i class="fa-solid fa-moon"></i
+                  ></span>
+                  <span
+                    id="toDark"
+                    class="hidden sun ms-3 text-sm font-medium text-gray-900 dark:text-white"
+                    ><i class="fa-regular fa-sun"></i
+                  ></span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="me z-10">
+        <h1 id="toDark" class="dark:text-white">Hi there!</h1>
+        <h1 class="text-[#3DCCCC]">I'm Warren Ryo Peña</h1>
+        <h1 id="toDark" class="dark:text-white">
+          an
+          <span class="text-[#008080]">Information Technology</span> Student
+        </h1>
+
+        <div class="mt-10 hidden md:block">
+          <div class="myProjectsBtn hide flex items-center">
+            <a
+              href="https://www.facebook.com/warrenryo.pena.10"
+              target="_blank"
+              class="mr-4"
+              ><img src="assets/socmed/fb.png" class="w-10"
+            /></a>
+            <a href="https://github.com/warrenryo" target="_blank"
+              ><img src="assets/socmed/github.png" class="w-10"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="formalPic absolute w-[80%] h-[50%] left-[5vh] sm:w-[50%] sm:h-[60%] duration-500 sm:left-[50%] bottom-0 md:bottom-[10%] md:left-[30%] md:h-[65%] md:w-[65%] md:left-[20%] lg:bottom-0 lg:w-[50%] lg:left-[29%] lg:h-[80%] xl:w-[50%] xl:h-[80%] xl:left-[28%] 2xl:left-[30%] hide_2"
+      >
+        <div class="group">
+          <img
+            src="assets/abstract4.png"
+            class="shape h-full absolute sm:bottom-0 sm:left-0 group-hover:translate-y-[-5%] sm:group-hover:bottom-10 duration-700 sm:translate-x-[-50%]"
+            alt=""
+          />
+          <img
+            src="assets/formal.png"
+            class="myPic h-full absolute bottom-0 group-hover:translate-x-[10%] sm:group-hover:translate-x-[-45%] duration-700 sm:translate-x-[-50%]"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <!--ABOUT PAGE-->
+    <section
+      id="about"
+      class="h-[145%] lg:h-[100vh] bg-gray-100 dark:bg-slate-800 duration-300"
+    >
+      <!--<div style="background-image: url(assets/code.jpg); width: 100%; height: 110vh; position: absolute;
+        background-size: cover; z-index: -1;">
+        </div>-->
+      <div class="md:flex md:items-center md:justify-center h-screen md:mx-20">
+        <div class="flex items-center justify-center relative top-10">
+          <img
+            src="assets/aboutme.jpg"
+            alt=""
+            class="aboutFade2 hide md:hidden w-[30vh] rounded-md"
+          />
+        </div>
+
+        <div
+          class="aboutFx block items-center justify-center md:mr-6 mt-20 md:mt-0"
+        >
+          <div class="text-center md:text-left">
+            <div class="aboutFade hide">
+              <p id="toDark" class="text-sm dark:text-white">Get to know</p>
+            </div>
+            <h1 class="aboutFade hide text-3xl text-[#3DCCCC] font-poppins">
+              <span class="font-bold">ABOUT</span>
+              <span class="text-sm font-default">ME</span>
+            </h1>
+          </div>
+          <br />
+          <div class="aboutFade hide">
+            <p
+              id="toDark2"
+              class="mx-10 text-sm lg:text-base md:mx-0 text-center md:text-left dark:text-[#b8c1ec] 2xl:w-[100vh]"
+            >
+              I'm a Warren Ryo Peña, 22 years old, living on Bagong Silang
+              Caloocan City and a student of Bestlink College of the Philippines
+              currently taking a program of Bachelor of Science in Information
+              Technology. I've been start coding and creating a project about 1
+              year and still learning about new technologies that have been used
+              in tech industry because one of my main goal is to become a
+              programmer for Web Development someday, not just a Web Developer
+              but a profession that includes programming.
+            </p>
+          </div>
+
+          <br />
+          <div class="aboutFade hide">
+            <p
+              id="toDark2"
+              class="mx-10 text-sm lg:text-base md:mx-0 text-center md:text-left dark:text-[#b8c1ec] 2xl:w-[100vh]"
+            >
+              I enjoy the challenges that come with coding, whether it's
+              creating sophisticated algorithms or UIs that are easy to use.
+              Making a computer do exactly what you want it to do can be quite
+              satisfying, and I experience that satisfaction every day as I work
+              on different projects.
+            </p>
+          </div>
+
+          <br />
+          <div class="aboutFade hide">
+            <p
+              id="toDark2"
+              class="mx-10 text-sm lg:text-base md:mx-0 text-center md:text-left dark:text-[#b8c1ec] 2xl:w-[100vh]"
+            >
+              However, my encouragement extends beyond programming. I believe in
+              lifelong learning. As the tech industry constantly changes, I'm
+              determined to keep up with the latest developments. I'm always
+              pushing myself, whether it's learning a new programming language,
+              investigating the latest technologies, or working with people that
+              share my interests.
+            </p>
+          </div>
+        </div>
+        <img
+          src="assets/aboutme.jpg"
+          alt=""
+          class="aboutFade2 hide hidden md:block w-[50vh] rounded-md"
+        />
+      </div>
+    </section>
+
+    <!--SKILLS PAGE-->
+    <section id="skills" class="h-screen dark:bg-[#232946] duration-300">
+      <!--<div style="background-image: url(assets/code4.jpg); width: 100%; height: 110vh; position: absolute;
+        background-size: cover; z-index: -1;">
+        </div>-->
+      <div class="mx-10 xl:mx-20 skillsFx">
+        <div class="skillsFade hide text-center relative top-10">
+          <h1 class="text-3xl dark:text-white px-2">
+            <span id="toDark" class="text-sm dark:text-white font-default"
+              >What</span
+            >
+            <span class="font-bold text-[#3DCCCC]">SKILLS </span
+            ><span id="toDark" class="text-sm dark:text-white font-default"
+              >i have</span
+            >
+          </h1>
+        </div>
+        <div class="skillsFade hide mt-[10vh]">
+          <p id="toDark2" class="text-center dark:text-[#b8c1ec]">
+            Below are my list of skills about building web applications such as
+            Frameworks, Backends and Databases
+          </p>
+        </div>
+
+        <div class="hidden xl:block">
+          <div class="skillsFade hide text-center mt-[10vh]">
+            <div
+              class="radial-progress hover:text-[#008080] text-sm text-center text-[#3DCCCC] duration-300"
+              style="--value: 85; --size: 20vh"
+              role="progressbar"
+            >
+              <img src="assets/html.png" class="w-[8vh]" /> 85%
+              <span>HTML</span>
+            </div>
+            <div
+              class="radial-progress hover:text-[#008080] text-sm text-center text-[#3DCCCC] duration-300 ml-[10vh]"
+              style="--value: 75; --size: 20vh"
+              role="progressbar"
+            >
+              <img src="assets/css.png" class="w-[7vh]" />75% <span>CSS</span>
+            </div>
+            <div
+              class="radial-progress hover:text-[#008080] text-sm text-center text-[#3DCCCC] duration-300 ml-[10vh]"
+              style="--value: 70; --size: 20vh"
+              role="progressbar"
+            >
+              <img src="assets/tailwindpng.png" class="w-[8vh]" />70%
+              <span>TAILWIND</span>
+            </div>
+          </div>
+          <div class="skillsFade hide mt-[10vh] text-center">
+            <div
+              class="radial-progress hover:text-[#008080] text-sm duration-300 text-center text-[#3DCCCC]"
+              style="--value: 55; --size: 20vh"
+              role="progressbar"
+            >
+              <img src="assets/php.png" class="w-[8vh]" /> 55% <span>PHP</span>
+            </div>
+            <div
+              class="radial-progress hover:text-[#008080] text-sm text-center text-[#3DCCCC] duration-300 ml-[10vh]"
+              style="--value: 65; --size: 20vh"
+              role="progressbar"
+            >
+              <img src="assets/laravel.png" class="w-[8vh]" />65%
+              <span>LARAVEL</span>
+            </div>
+            <div
+              class="radial-progress hover:text-[#008080] text-sm text-center text-[#3DCCCC] duration-300 ml-[10vh]"
+              style="--value: 45; --size: 20vh"
+              role="progressbar"
+            >
+              <img src="assets/javascript.png" class="w-[8vh]" />45%
+              <span>JAVASCRIPT</span>
+            </div>
+            <div
+              class="radial-progress hover:text-[#008080] text-sm text-center text-[#3DCCCC] duration-300 ml-[10vh]"
+              style="--value: 75; --size: 20vh"
+              role="progressbar"
+            >
+              <img src="assets/mysql.png" class="w-[8vh]" /> 75%
+              <span>MYSQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hidden lg:block xl:hidden">
+          <div
+            class="skillsFade hide grid grid-cols-3 place-items-center mt-[10vh]"
+          >
+            <div
+              class="radial-progress hover:text-[#008080] text-center text-[#3DCCCC] duration-300"
+              style="--value: 85; --size: 20vh"
+              role="progressbar"
+            >
+              <img src="assets/html.png" class="w-[8vh]" /> 85%
+              <span>HTML</span>
+            </div>
+            <div
+              class="radial-progress hover:text-[#008080] text-center text-[#3DCCCC] duration-300"
+              style="--value: 75; --size: 20vh"
+              role="progressbar"
+            >
+              <img src="assets/css.png" class="w-[7vh]" />75% <span>CSS</span>
+            </div>
+            <div
+              class="radial-progress hover:text-[#008080] text-center text-[#3DCCCC] duration-300"
+              style="--value: 70; --size: 20vh"
+              role="progressbar"
+            >
+              <img src="assets/tailwindpng.png" class="w-[8vh]" />70%
+              <span>TAILWIND</span>
+            </div>
+          </div>
+          <div
+            class="skillsFade grid grid-cols-3 place-items-center hide mt-[6vh]"
+          >
+            <div
+              class="radial-progress hover:text-[#008080] duration-300 text-center text-[#3DCCCC]"
+              style="--value: 55; --size: 20vh"
+              role="progressbar"
+            >
+              <img src="assets/php.png" class="w-[8vh]" /> 55% <span>PHP</span>
+            </div>
+            <div
+              class="radial-progress hover:text-[#008080] text-center text-[#3DCCCC] duration-300"
+              style="--value: 65; --size: 20vh"
+              role="progressbar"
+            >
+              <img src="assets/laravel.png" class="w-[8vh]" />65%
+              <span>LARAVEL</span>
+            </div>
+            <div
+              class="radial-progress hover:text-[#008080] text-center text-[#3DCCCC] duration-300"
+              style="--value: 45; --size: 20vh"
+              role="progressbar"
+            >
+              <img src="assets/javascript.png" class="w-[8vh]" />45%
+              <span>JAVASCRIPT</span>
+            </div>
+          </div>
+          <div
+            class="skillsFade grid grid-cols-3 place-items-center hide mt-[6vh]"
+          >
+            <div class="col-span-1"></div>
+            <div
+              class="radial-progress hover:text-[#008080] text-center text-[#3DCCCC] duration-300"
+              style="--value: 75; --size: 20vh"
+              role="progressbar"
+            >
+              <img src="assets/mysql.png" class="w-[8vh]" /> 75%
+              <span>MYSQL</span>
+            </div>
+            <div class="col-span-1"></div>
+          </div>
+        </div>
+
+        <div class="hidden md:block lg:hidden xl:hidden">
+          <div
+            class="skillsFade hide grid grid-cols-3 place-items-center mt-[10vh]"
+          >
+            <div
+              class="radial-progress hover:text-[#008080] text-center text-[#3DCCCC] duration-300"
+              style="--value: 85; --size: 15vh"
+              role="progressbar"
+            >
+              <img src="assets/html.png" class="w-[6vh]" /> 85%
+            </div>
+            <div
+              class="radial-progress hover:text-[#008080] text-center text-[#3DCCCC] duration-300"
+              style="--value: 75; --size: 15vh"
+              role="progressbar"
+            >
+              <img src="assets/css.png" class="w-[5.5vh]" />75%
+            </div>
+            <div
+              class="radial-progress hover:text-[#008080] text-center text-[#3DCCCC] duration-300"
+              style="--value: 70; --size: 15vh"
+              role="progressbar"
+            >
+              <img src="assets/tailwindpng.png" class="w-[6vh]" />70%
+            </div>
+          </div>
+          <div
+            class="skillsFade grid grid-cols-3 place-items-center hide mt-[6vh]"
+          >
+            <div
+              class="radial-progress hover:text-[#008080] duration-300 text-center text-[#3DCCCC]"
+              style="--value: 55; --size: 15vh"
+              role="progressbar"
+            >
+              <img src="assets/php.png" class="w-[6vh]" /> 55%
+            </div>
+            <div
+              class="radial-progress hover:text-[#008080] text-center text-[#3DCCCC] duration-300"
+              style="--value: 65; --size: 15vh"
+              role="progressbar"
+            >
+              <img src="assets/laravel.png" class="w-[6vh]" />65%
+            </div>
+            <div
+              class="radial-progress hover:text-[#008080] text-center text-[#3DCCCC] duration-300"
+              style="--value: 45; --size: 15vh"
+              role="progressbar"
+            >
+              <img src="assets/javascript.png" class="w-[6vh] ml-2" />45%
+            </div>
+          </div>
+          <div
+            class="skillsFade grid grid-cols-3 place-items-center hide mt-[6vh]"
+          >
+            <div class="col-span-1"></div>
+            <div
+              class="radial-progress hover:text-[#008080] text-center text-[#3DCCCC] duration-300"
+              style="--value: 75; --size: 15vh"
+              role="progressbar"
+            >
+              <img src="assets/mysql.png" class="w-[6vh]" /> 75%
+            </div>
+            <div class="col-span-1"></div>
+          </div>
+        </div>
+
+        <div class="md:hidden">
+          <div
+            class="skillsFade hide grid grid-cols-3 text-center place-items-center mt-[10vh]"
+          >
+            <div
+              class="radial-progress text-sm mx-5 hover:text-[#008080] text-center text-[#3DCCCC] duration-300"
+              style="--value: 85; --size: 10vh"
+              role="progressbar"
+            >
+              <img src="assets/html.png" class="w-[3vh] ml-1" /> 85%
+              <span></span>
+            </div>
+            <div
+              class="radial-progress text-sm mx-5 hover:text-[#008080] text-center text-[#3DCCCC] duration-300"
+              style="--value: 75; --size: 10vh"
+              role="progressbar"
+            >
+              <img src="assets/css.png" class="w-[3vh]" /> 75% <span></span>
+            </div>
+            <div
+              class="radial-progress text-sm mx-5 hover:text-[#008080] text-center text-[#3DCCCC] duration-300"
+              style="--value: 70; --size: 10vh"
+              role="progressbar"
+            >
+              <img src="assets/tailwindpng.png" class="w-[3vh]" /> 70%
+              <span></span>
+            </div>
+          </div>
+          <div
+            class="skillsFade hide grid grid-cols-3 mt-[4vh] place-items-center text-center"
+          >
+            <div
+              class="radial-progress text-sm mx-5 hover:text-[#008080] duration-300 text-center text-[#3DCCCC]"
+              style="--value: 55; --size: 10vh"
+              role="progressbar"
+            >
+              <img src="assets/php.png" class="w-[4vh]" />55% <span></span>
+            </div>
+            <div
+              class="radial-progress text-sm mx-5 hover:text-[#008080] text-center text-[#3DCCCC] duration-300"
+              style="--value: 65; --size: 10vh"
+              role="progressbar"
+            >
+              <img src="assets/laravel.png" class="w-[3vh]" /> 65% <span></span>
+            </div>
+            <div
+              class="radial-progress text-sm mx-5 hover:text-[#008080] text-center text-[#3DCCCC] duration-300"
+              style="--value: 45; --size: 10vh"
+              role="progressbar"
+            >
+              <img src="assets/javascript.png" class="w-[3vh]" /> 45%
+              <span></span>
+            </div>
+          </div>
+
+          <div
+            class="skillsFade hide grid grid-cols-3 mt-[4vh] place-items-center text-center"
+          >
+            <div class="col-span-1"></div>
+            <!-- Placeholder column -->
+            <div class="col-span-1 text-center">
+              <!-- Central column -->
+              <div
+                class="radial-progress text-sm mx-5 hover:text-[#008080] text-center text-[#3DCCCC] duration-300"
+                style="--value: 75; --size: 10vh"
+                role="progressbar"
+              >
+                <img src="assets/mysql.png" class="w-[3vh]" /> 75% <span></span>
+              </div>
+            </div>
+            <div class="col-span-1"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--PROJECT PAGE-->
+    <section
+      id="projects"
+      class="h-[200%] sm:h-[250%] xl:h-[100%] bg-gray-100 dark:bg-slate-800 duration-300"
+    >
+      <!--<div style="background-image: url(assets/code5.jpg); width: 100%; height: 110vh; position: absolute;
+        background-size: cover; z-index: -1;">
+        </div>-->
+      <div class="myProjects hide text-center relative top-6">
+        <p id="toDark" class="text-sm dark:text-white">See My</p>
+        <h1 class="ml-2 text-3xl font-bold text-[#3DCCCC]">PROJECTS</h1>
+      </div>
+      <div
+        class="grid sm:grid-cols-2 xl:grid xl:grid-cols-3 sm:gap-2 xl:gap-4 xl:mx-[20vh] mt-10 mx-10"
+      >
+        <div class="myProjects1 flex flex-col hide mt-10 ">
+          <div class="bg-[#3DCCCC] shadow-xl rounded-lg flex flex-col h-full">
+            <img src="assets/POS/pos.jpg" class="rounded-t-lg" />
+            <div class="about p-6 flex-1">
+              <h2
+                class="text-center md:text-left text-xl lg:text-2xl text-white"
+              >
+                Point of Sale Management System
+              </h2>
+              <p
+                class="hidden sm:block mt-4 text-sm lg:text-base text-white text-justify"
+              >
+                Introducing my Point of Sale (POS) Management System a
+                cutting-edge solution designed to streamline your business
+                operations. From swift and accurate transactions to real-time
+                inventory tracking, our user-friendly interface empowers your
+                team to manage sales seamlessly.
+              </p>
+              <div class="text-center md:text-right mt-10">
+                <a
+                  href="projects/pos.html"
+                  target="_blank"
+                  class="p-2 rounded-md text-white px-4 hover:bg-slate-800 hover:text-white duration-300 bg-[#008080]"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="myProjects1 flex flex-col hide mt-10 ">
+          <div class="bg-[#3DCCCC] shadow-xl rounded-lg flex flex-col h-full">
+            <img src="assets/ecommerce/sekai.jpg" class="rounded-t-lg" />
+            <div class="about p-6 flex-1">
+              <h2
+                class="text-center md:text-left text-xl lg:text-2xl text-white"
+              >
+                Musical Instrument Ecommerce
+              </h2>
+              <p
+                class="hidden sm:block mt-4 text-sm lg:text-base text-white text-justify"
+              >
+                Introducing my Sekai Music Ecommerce that i created with Laravel
+                Breeze with built-in authentication, creation of accounts, admin
+                panel, track orders and add cart features.
+              </p>
+              <div class="text-center md:text-right mt-10">
+                <a
+                  href="projects/ecommerce.html"
+                  target="_blank"
+                  class="p-2 rounded-md text-white px-4 hover:bg-slate-800 hover:text-white duration-300 bg-[#008080]"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="myProjects1 flex flex-col hide mt-10 ">
+          <div class="bg-[#3DCCCC] shadow-xl rounded-lg flex flex-col h-full">
+            <img src="assets/hotel booking/hotel.jpg" class="rounded-t-lg" />
+            <div class="about p-6 flex-1">
+              <h2
+                class="text-center md:text-left text-xl lg:text-2xl text-white"
+              >
+                Hotel Booking System
+              </h2>
+              <p
+                class="hidden sm:block mt-4 text-sm lg:text-base text-white text-justify"
+              >
+                Mandra Hotel a system that manages customer booking of their decided rooms and dining 
+                tables. This project aims to provide a simple booking system to assist customer for their
+                demands.
+              </p>
+              <div class="text-center md:text-right mt-10">
+                <a
+                  href="projects/hotelBooking.html"
+                  target="_blank"
+                  class="p-2 rounded-md text-white px-4 hover:bg-slate-800 hover:text-white duration-300 bg-[#008080]"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+    <!--CONTACT PAGE -->
+    <section
+      id="contact"
+      class="h-[50vh] md:h-[25vh] dark:bg-[#232946] duration-300"
+    >
+      <div class="myProjects hide text-center relative top-6">
+        <h1 class="ml-2 text-3xl font-bold text-[#3DCCCC]">CONTACT ME</h1>
+        <p id="toDark" class="mt-4 dark:text-white">
+          You can Contact me through this link
+        </p>
+      </div>
+
+      <div
+        class="hide block items-center md:flex md:items-center md:justify-center mt-16 mx-10"
+      >
+        <div class="flex items-center justify-center">
+          <button id="toDark" class="flex items-center dark:text-white">
+            <img src="assets/socmed/gmail.png" class="mr-2 w-10" alt="" />
+            warrenryo@gmail.com
+          </button>
+        </div>
+
+        <a
+          href="https://www.linkedin.com/in/warren-ryo-pe%C3%B1a-72605b26a/"
+          target="_blank"
+          class="ml-4 flex justify-center py-2"
+          ><img src="assets/socmed/linkedin.png" class="w-10" alt=""
+        /></a>
+        <a
+          href="https://github.com/warrenryo" target="_blank"
+          class="ml-2 flex justify-center py-2"
+          ><img src="assets/socmed/github.png" class="w-10" alt=""
+        /></a>
+        <a
+          href="https://www.facebook.com/warrenryo.pena.10" target="_blank"
+          class="ml-2 flex justify-center py-2"
+          ><img src="assets/socmed/fb.png" class="w-10" alt=""
+        /></a>
+        <a
+          href=""
+          id="resume"
+          class="bg-[#3DCCCC] ml-2 p-2 rounded-md flex justify-center dark:text-black hover:text-white hover:bg-[#008080]"
+          >View My Resume</a
+        >
+      </div>
+    </section>
+
+
+    <script src="javascript.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/html.css" />
+    <link rel="stylesheet" href="css/effects.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.4.17/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.js"></script>
+    <style>
+      body {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-attachment: fixed;
+        background-size: cover;
+        z-index: -1;
+      }
+    </style>
+    <title>Point of Sale Management System</title>
+  </head>
+  <body class="h-[120%] dark:bg-[#232946] xl:h-screen">
+    <div class="block justify-center xl:grid xl:grid-cols-2 xl:gap-10 xl:mt-[20vh] xl:mx-[25vh]">
+      <div class="xl:hidden flex items-center justify-center mb-10 mx-10 mt-10 xl:mx-0 xl:mt-0">
+        <video width="640" height="360" controls>
+          <source src="../assets/POS/2023-12-03 00-49-19.mp4" type="video/mp4">
+      </video>
+      </div>
+      <div class="block mx-10 xl:mx-0 xl:mr-4">
+        <h1 class="dark:text-white text-3xl text-center xl:text-left">Point of Sale Management System</h1>
+        <p class="text-gray-400 text-justify mt-4 md:text-center xl:text-justify xl:text-left">
+          I created this project using Laravel with built in authentication
+          using Laravel Auth UI. This Point of Sale Management System allows us
+          to add a specific product, brands and the quantity and it also have a
+          receipt generated in order to track the order easily.
+        </p>
+        <p class="text-gray-400 text-left mt-4 md:text-center xl:text-justify xl:text-left">
+          Project Source Code: <span ><a href="https://github.com/warrenryo/Point-of-Sale-Management-System" target="_blank" class="underline">https://github.com/warrenryo/Point-of-Sale-Management-System</a></span>
+        </p>
+        <p class="text-gray-400 mt-4 md:text-center xl:text-left ">
+          This Project Contains the following technologies used:
+        </p>
+        <div class="grid grid-cols-2 md:grid-cols-5 xl:grid-cols-3 gap-4 mt-6">
+          <div class="flex items-center mt-2">
+            <img src="../assets/laravel.png" class="w-[5vh]" alt="" />
+            <h1 class="text-gray-400 ml-2">Laravel Auth</h1>
+          </div>
+          <div class="flex items-center mt-2">
+            <img src="../assets/bootstrap.png" class="w-[5vh]" alt="" />
+            <h1 class="text-gray-400 ml-2">Bootstrap</h1>
+          </div>
+          <div class="flex items-center mt-2">
+            <img src="../assets/javascript.png" class="w-[5vh]" alt="" />
+            <h1 class="text-gray-400 ml-2">Javascript</h1>
+          </div>
+          <div class="flex items-center mt-2">
+            <img src="../assets/mysql.png" class="w-[5vh]" alt="" />
+            <h1 class="text-gray-400 ml-2">MySQL</h1>
+          </div>
+          <div class="flex items-center mt-2">
+            <img src="../assets/php.png" class="w-[5vh]" alt="" />
+            <h1 class="text-gray-400 ml-2">PHP</h1>
+          </div>
+        </div>
+        <div class="mt-10  pb-10 md:pb-0 flex items-center justify-center xl:float-right">
+          <a href="" id="posSite" class="p-2 rounded-xl text-black px-4 hover:bg-slate-800 hover:text-white duration-300 bg-[#3DCCCC]">View Actual Project</a>
+        </div>
+      </div>
+      <div class="hidden xl:block mx-10 mt-10 xl:mx-0 xl:mt-0">
+        <video width="640" height="360" controls>
+          <source src="../assets/POS/2023-12-03 00-49-19.mp4" type="video/mp4">
+      </video>
+      </div>
+    </div>
+    <script>
+      const pos = document.getElementById('posSite');
+
+      pos.addEventListener('click', function(event){
+        alert('The Domain Site is not yet available');
+        event.preventDefault();
+      })
+    </script>
+  </body>
+</html>

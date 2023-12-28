@@ -1,0 +1,81 @@
+.hide{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(10%);
+    transition: all 1s;
+}
+.hide_2{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-10%);
+    transition: all 1s;
+}
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+.show_2{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.myProjectsBtn:nth-child(1){
+    transition-delay: 3000ms;
+}
+
+.aboutFade:nth-child(1) {
+    transition-delay: 300ms;
+}
+.aboutFade:nth-child(2) {
+    transition-delay: 400ms;
+}
+.aboutFade:nth-child(3) {
+    transition-delay: 500ms;
+}
+.aboutFade:nth-child(4) {
+    transition-delay: 600ms;
+}
+.aboutFade:nth-child(5) {
+    transition-delay: 700ms;
+}
+.aboutFade:nth-child(7) {
+    transition-delay: 900ms;
+}
+.aboutFade2:nth-child(1){
+    transition-delay: 200ms;
+}
+.aboutFade2:nth-child(2){
+    transition-delay: 700ms;
+}
+
+
+.skillsFade:nth-child(1) {
+    transition-delay: 200ms;
+}
+.skillsFade:nth-child(2) {
+    transition-delay: 300ms;
+}
+.skillsFade:nth-child(3) {
+    transition-delay: 400ms;
+}
+.skillsFade:nth-child(4) {
+    transition-delay: 500ms;
+}
+
+
+/*MY PROJECTS */
+.myProjects:nth-child(1){
+    transition-delay: 200ms;
+}
+.myProjects1:nth-child(1){
+    transition-delay: 400ms;
+}
+.myProjects1:nth-child(2){
+    transition-delay: 600ms;
+}
+.myProjects1:nth-child(3){
+    transition-delay: 800ms;
+}
+
